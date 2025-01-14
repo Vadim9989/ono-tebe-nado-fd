@@ -3,13 +3,12 @@ header {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  padding: 100px 50px;
+  padding: 100px 50px 97px 50px;
 }
 .header__links-list {
   display: flex;
-  gap: 28px;
+  gap: 32px;
   list-style: circle;
-
   font-family: Raleway;
   font-size: 18px;
   font-weight: 400;
@@ -17,15 +16,22 @@ header {
   text-align: left;
 }
 
-.header__links-list-item_no-bullit {
-  list-style: none;
+.header__link {
+  text-decoration: none;
+  border-bottom: 1px solid #000;
 }
-.header__link_active {
+
+.header__links-list-item_no-bullit {
   list-style: none;
   text-decoration: none;
 }
+.header__link_active {
+  text-decoration: none;
+  border-bottom: none;
+}
 .header__logo {
-  width: 148px;
+  padding-top: 8px;
+  width: 136px;
   display: block;
 }
 
@@ -36,7 +42,7 @@ header {
   line-height: 24.3px;
   text-align: left;
   justify-self: end;
-
+  padding-right: 37px;
   max-width: 240px;
 }
 
@@ -44,15 +50,33 @@ header {
   list-style: none;
 }
 
+.header__address__link {
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+}
+
 .cover {
   background-image: url(/images/cover.jpg);
   background-size: cover;
   z-index: -1;
   position: relative;
+  margin-top: -7px;
+  background-position: center;
+}
+
+.overlay {
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  inset: 0;
+  z-index: 1;
+  background-color: #000;
 }
 
 h1 {
-  padding: 160px 50px 0 50px;
+  padding: 166px 50px 0 50px;
   font-family: Raleway;
   font-size: 100px;
   font-weight: 700;
@@ -61,14 +85,19 @@ h1 {
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-
+  position: inherit;
+  z-index: 2;
   color: white;
 }
 
 .h1__second {
+  padding-left: 30px;
+  padding-top: 20px;
   text-align: center;
 }
 .h1__third {
+  padding-left: 614px;
+  padding-top: 20px;
   text-align: end;
 }
 
@@ -76,9 +105,10 @@ h1 {
   display: flex;
   justify-content: space-between;
   padding: 106px 50px 50px 50px;
-
+  position: inherit;
+  z-index: 2;
   font-family: Raleway;
-
+  text-transform: uppercase;
   font-size: 22px;
   font-weight: 400;
   line-height: 28px;
@@ -87,6 +117,7 @@ h1 {
 }
 
 .text__discription {
+  align-content: center;
   word-spacing: 18px;
 }
 
@@ -96,17 +127,18 @@ h1 {
   font-family: Raleway;
   font-size: 22px;
   font-weight: 500;
-
   background: transparent;
   color: white;
   border: 2px solid white;
 }
 
 .lots {
+  text-transform: uppercase;
   margin: 180px 24px;
 }
 
 .lots__heading {
+  margin-left: 40px;
   margin-bottom: 27px;
   font-family: Raleway;
   font-size: 40px;
@@ -118,7 +150,9 @@ h1 {
 }
 
 .lots__card-list {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat();
   color: white;
   gap: 25px;
   list-style: none;
@@ -128,55 +162,72 @@ h1 {
 .card_type_film {
   background-image: url(/images/card-lot-01.jpg);
   background-size: cover;
+  background-position: center;
 }
 
 .card_type_book {
   background-image: url(/images/card-lot-02.jpg);
   background-size: cover;
+  background-position: center;
 }
 
 .card_type_picture {
   background-image: url(/images/card-lot-03.jpg);
   background-size: cover;
+  background-position: center;
 }
 
 .lots__card-list-item {
   display: flex;
   flex-direction: column;
   width: 334px;
-  height: 100%;
-}
-
-.card__text {
-  text-decoration: none;
+  min-height: 598px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 504px;
+  height: 100%;
+  padding: 48px 40px;
+  position: relative;
+  z-index: -1;
 }
 
 .card__title {
   text-decoration: underline;
+  text-transform: uppercase;
   font-size: 22px;
-  padding: 48px 40px;
+  color: white;
   width: 254px;
   height: 82px;
+  z-index: 3;
 }
 
 .card__text {
-  font-size: 20px;
   max-width: 254px;
-  padding: 48px 40px;
+  line-height: 120%;
   font-family: Raleway;
   font-size: 20px;
   text-decoration: none;
+  text-transform: none;
+  z-index: 3;
 }
 
 .card-link {
+  height: 100%;
   text-decoration: none;
+}
+
+.lots__look-more-link {
+  text-transform: none;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+  margin-left: 40px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23.48px;
+  text-align: left;
 }
 
 .about {
@@ -191,28 +242,24 @@ h1 {
 }
 
 .about__title {
-  margin-top: 100px;
+  margin-top: 76px;
   margin-bottom: 100px;
-  padding-left: 80px;
+  padding-left: 83px;
   font-family: Raleway;
   font-size: 40px;
   font-weight: 700;
   line-height: 46.96px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
+  text-transform: uppercase;
 }
 
 .about-text {
+  width: 772px;
   margin-bottom: 24px;
-  padding-left: 80px;
+  padding-left: 82px;
   font-family: Raleway;
   font-size: 20px;
   font-weight: 400;
   line-height: 24px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
 }
 
 .about__logo {
@@ -225,6 +272,8 @@ h1 {
 }
 
 .about__logo-background__black {
+  margin-top: -27px;
+  margin-left: 70px;
   display: flex;
   justify-content: center;
   width: 240px;
@@ -234,22 +283,48 @@ h1 {
 }
 
 .footer {
+  padding-left: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-top: 118px;
+  line-height: 24.3px;
+  letter-spacing: 1px;
+  padding-right: 165px;
+}
+
+.footer__menu {
+  line-height: 22.5px;
+  padding-left: 116px;
+  text-align: center;
+}
+.footer__address {
+  text-decoration: none;
+}
+.footer__links-list {
+  text-decoration: none;
+}
+.footer__social-list {
   display: flex;
-  justify-content: space-between;
-  margin-top: 180px;
-  width: auto;
-  min-height: 180px;
+  justify-content: center;
+  gap: 51px;
+  margin-right: -285px;
+  padding-top: 2px;
 }
 
 .footer__social-img {
   width: 45px;
 }
 
-.footer__social-list {
-  gap: 45px;
-  display: flex;
+.footer__menu-link {
+  border-bottom: 1px solid #000;
+  text-decoration: none;
 }
 
-.footer__links-list-item_no-bullit {
+.footer__link {
+  border-bottom: 1px solid #000;
   text-decoration: none;
+}
+
+.footer__link_active {
+  border-bottom: none;
 }
