@@ -3,7 +3,7 @@ header {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  padding: 100px 50px 97px 50px;
+  padding: 97px 50px 97px 50px;
 }
 .header__links-list {
   display: flex;
@@ -60,7 +60,7 @@ header {
   background-size: cover;
   z-index: -1;
   position: relative;
-  margin-top: -7px;
+  margin-top: -5px;
   background-position: center;
 }
 
@@ -118,7 +118,7 @@ h1 {
 
 .text__discription {
   align-content: center;
-  word-spacing: 18px;
+  word-spacing: 19px;
 }
 
 .bet-button {
