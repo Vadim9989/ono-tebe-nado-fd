@@ -3,7 +3,7 @@ header {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  padding: 85px 50px 91px 50px;
+  padding: 106px 50px 91px 50px;
 }
 .header__links-list {
   display: flex;
@@ -39,6 +39,9 @@ header {
   font-weight: 400;
   font-style: normal;
   line-height: 24.3px;
+}
+
+.address__header {
   text-align: left;
   justify-self: end;
   padding-right: 37px;
@@ -73,35 +76,34 @@ header {
   background-color: #000;
 }
 
-h1 {
+.cover__title {
   display: grid;
-  padding: 166px 20px 0 50px;
+  padding: 156px 20px 0 50px;
   font-family: "Raleway", sans-serif;
   font-size: 100px;
   font-weight: 700;
-  line-height: 115px;
   letter-spacing: 0.3em;
   text-align: left;
   position: inherit;
   z-index: 2;
   color: white;
-  line-height: 128%;
+  line-height: 134%;
 }
 
-.h1__center {
+.title__center {
   text-align: center;
 }
-.h1__right {
+.title__right {
   text-align: end;
 }
 
 .line {
   line-height: 0;
 }
-.discription {
+.description {
   display: flex;
   justify-content: space-between;
-  padding: 106px 50px 50px 50px;
+  padding: 100px 50px 50px 50px;
   position: inherit;
   z-index: 2;
   text-transform: uppercase;
@@ -112,7 +114,7 @@ h1 {
   color: white;
 }
 
-.text__discription {
+.text__description {
   align-content: center;
   word-spacing: 19px;
 }
@@ -134,7 +136,7 @@ h1 {
 
 .lots__heading {
   margin-left: 40px;
-  margin-bottom: 27px;
+  margin-bottom: 26px;
   font-size: 40px;
   font-weight: 700;
   line-height: 46.96px;
@@ -280,7 +282,7 @@ h1 {
   text-align: center;
   line-height: 120%;
 }
-.footer__address {
+.address__footer {
   max-width: 264.5px;
   text-decoration: none;
   font-style: normal;
