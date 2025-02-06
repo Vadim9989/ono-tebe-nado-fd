@@ -48,10 +48,6 @@ header {
   max-width: 240px;
 }
 
-.header__address {
-  list-style: none;
-}
-
 .address__link {
   text-decoration: none;
   border-bottom: 1px solid #000;
